@@ -71,7 +71,7 @@ LRESULT CALLBACK PELouSi(HWND hWnd,UINT nMsg,WPARAM wParam,LPARAM lParam)
 		break;
 	
 	case WM_TIMER:
-		GetLastError();
+		OnTimer(hWnd);
 		break;
 	case WM_PAINT:
 		hDC=BeginPaint(hWnd,&pt);  //getDC，窗口可操作的标识
@@ -85,13 +85,16 @@ LRESULT CALLBACK PELouSi(HWND hWnd,UINT nMsg,WPARAM wParam,LPARAM lParam)
 			OnReturn(hWnd);
 			break;
 		case VK_LEFT:
-			
+			 //左移
+			OnLeft(hWnd);
 			break;
 		case VK_RIGHT:
-			
+			//右移
+			OnRight(hWnd);
 			break;
 		case VK_UP:
-			
+			//变形
+			OnchangeSqare(hWnd);
 			break;
 		case VK_DOWN:
 			

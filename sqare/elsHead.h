@@ -20,7 +20,36 @@ void PaintSqare(HDC hMemDC);
 
 //回车键
 void OnReturn(HWND hWnd);
+//左移
+void OnLeft(HWND hWnd);
+//右移
+void	 OnRight(HWND hWnd);
+//方块变形
+void OnchangeSqare(HWND hWnd);
 
 //方块下落
 void SqareDown();
+//方块左移
+void SqareLeft();
+//方块右移
+void SqareRight();
 
+
+//定时器响应函数
+void OnTimer(HWND hWn);
+
+//方块停在最底下   0不可以下落   1可以下落
+int CanSqareDown();
+int CanSqareDown2();
+int CanSqareLeft();
+int CanSqareLeft2();
+int CanSqareRight();
+int CanSqareRight2();
+int CanSqareChangeShape();
+
+//1 变成2
+void Chang1To2();
+void ChangeSqare();
+
+//显示2
+void ShowSqare2(HDC hMemDC);
